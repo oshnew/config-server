@@ -14,16 +14,16 @@ import java.net.UnknownHostException;
 @Slf4j
 public class ConfigServerApplication {
 
-	public static void main(String[] args) throws UnknownHostException {
-		SpringApplication app = new SpringApplication(ConfigServerApplication.class);
-		Environment env = app.run(args).getEnvironment();
+    public static void main(String[] args) throws UnknownHostException {
+        SpringApplication app = new SpringApplication(ConfigServerApplication.class);
+        Environment env = app.run(args).getEnvironment();
 
-		String protocol = "http";
-		if (env.getProperty("server.ssl.key-store") != null) {
-			protocol = "https";
-		}
+        String protocol = "http";
+        if (env.getProperty("server.ssl.key-store") != null) {
+            protocol = "https";
+        }
 
-		// @formatter:off
+        // @formatter:off
 
 		log.info("\n----------------------------------------------------------\n\t" +
 				"Application '{}' is running!\n\t" +
@@ -40,6 +40,6 @@ public class ConfigServerApplication {
 		);
 
 		// @formatter:on
-	}
+    }
 
 }
