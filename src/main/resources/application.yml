@@ -17,3 +17,9 @@ spring:
         git:
           uri: "https://github.com/oshnew/msa-cofig-server-study-repo.git"
           skip-ssl-validation: true
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.0.12:3306/config_server
+      username: test-user
+      password: Test-password-1@
