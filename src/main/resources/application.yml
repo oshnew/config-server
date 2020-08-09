@@ -1,0 +1,19 @@
+#Project Info
+info:
+  app:
+    name: Config Server
+    description: Config Server
+    version: 0.0.1
+
+server:
+  port: 15990
+
+spring:
+  application:
+    name: "config-server"
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/oshnew/msa-cofig-server-study-repo.git"
+          skip-ssl-validation: true
